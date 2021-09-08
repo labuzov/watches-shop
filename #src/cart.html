@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Корзина</title>
+</head>
+<body>
+    @@include('_header.html')
+
+    <hr class="hr-primary">
+
+    <section class="cart">
+        <div class="container cart__container">
+            <div class="cart__top">
+                <nav class="cart__breadcrumbs breadcrumbs">
+                    <div class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__link">Главная</a>
+                    </div>
+                    <div class="breadcrumbs__item">
+                        <a class="breadcrumbs__link">Корзина</a>
+                    </div>
+                </nav>
+                <h1 class="cart__title">Корзина</h1>
+            </div>
+            <!-- <h1 class="cart__empty">Ваша корзина пуста</h1> -->
+            <div class="cart__content">
+                <div class="cart__item item">
+                    <div class="left">
+                        <div class="item__image">
+                            <a href="pr">
+                                <img src="img/watches.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="item__title">
+                            <a href="product_watches.html">
+                                <h2 class="item__brand">Brand</h2>
+                                <h2 class="item__model">Model</h2>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="right">
+                        <div class="item__price"><span class="item__price--int">219</span> BYN</div>
+                        <div class="item__btns">
+                            <button class="item__quantity-btn btn-reset js-minus">-</button>
+                            <div class="item__counter">1</div>
+                            <button class="item__quantity-btn btn-reset js-plus">+</button>
+                        </div>
+
+                    </div>
+                    <button class="item__delete-btn btn-reset delete">&#215;</button>
+                </div>
+                <hr class="hr-primary">
+                <div class="cart__item item">
+                    <div class="left">
+                        <div class="item__image">
+                            <a href="pr">
+                                <img src="img/watches.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="item__title">
+                            <a href="product_watches.html">
+                                <h2 class="item__brand">Brand</h2>
+                                <h2 class="item__model">Model</h2>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="right">
+                        <div class="item__price"><span class="item__price--int">219</span> BYN</div>
+                        <div class="item__btns">
+                            <button class="item__quantity-btn btn-reset js-minus">-</button>
+                            <div class="item__counter">1</div>
+                            <button class="item__quantity-btn btn-reset js-plus">+</button>
+                        </div>
+
+                    </div>
+                    <button class="item__delete-btn btn-reset delete">&#215;</button>
+                </div>
+                <hr class="hr-primary">
+            </div>
+            <div class="cart__completion">
+                <div class="cart__total-price">
+                    <p class="p-total">Итого:</p>
+                    <p class="price"><span class="price--int">438</span> BYN</p>
+                </div>
+                <a href="order.html" class="cart__order-btn">Оформить заказ</a>
+            </div>
+        </div>
+    </section>
+
+    @@include('_footer.html')
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

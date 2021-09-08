@@ -1,0 +1,38 @@
+.breadcrumbs {
+    display: flex;
+    
+    // .breadcrumbs__item
+    &__item {
+        position: relative;
+        padding-right: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &:not(:last-child)::after {
+            content: "/";
+            position: absolute;
+            top: 0;
+            right: 8px;
+            font-size: 12px;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    
+    // .breadcrumbs__link  
+    &__link {
+
+        color: var(--c-primary-fuzzy);
+    }
+
+    &__link[href] {
+        color: var(--c-primary);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

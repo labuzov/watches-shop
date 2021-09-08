@@ -1,0 +1,123 @@
+.product-description {
+    padding: 15px 0;
+    padding-left: 50px;
+
+    @media (max-width: 992px) {
+        padding-left: 0;
+    }
+
+    // .product-description__title
+    &__title {
+        font-size: 18px;
+        // font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--c-accent);
+
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+    }
+
+    // .product-description__details
+    &__details {
+    }
+
+    .details {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        margin: 0 -20px;
+        width: 100%;
+    
+        // .details__block
+        &__block {
+            margin-bottom: 15px;
+            min-width: 120px;
+            width: (100% / 3);
+
+            @media (max-width: 1200px) {
+                width: (100% / 2);
+            }
+        }
+        
+        // .details__title 
+        &__title {
+            padding: 0 20px;
+            padding-bottom: 5px;
+            font-size: 13px;
+            color: var(--c-primary-fuzzy);
+        }
+    
+        // .details__value
+        &__value {
+            padding: 0 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--c-primary);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__availability--true,
+    &__availability--false {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0 15px;
+
+        // .product-description__availability-icon
+        .product-description__availability-icon {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+    }
+
+    &__availability--true {
+        .product-description__availability-icon {
+            color: var(--c-green);
+        }
+    }
+
+    &__availability--false {
+        .product-description__availability-icon {
+            color: var(--c-red);
+        }
+    }
+
+
+    // .product-description__availability-text
+    &__availability-text {
+        font-weight: 700;
+    }
+
+    &__price {
+        font-weight: 700;
+        font-size: 26px;
+    }
+
+    &__btn {
+        padding: 15px 25px;
+        margin: 10px 0;
+        color: var(--c-btn-text);
+        font-size: 18px;
+        background-color: var(--c-primary);
+        min-width: 300px;
+        transition: .2s;
+
+        &:hover {
+            background-color: var(--c-primary-hover);
+        }
+
+        @media (max-width: 425px) {
+            min-width: 250px;
+        }
+    }
+
+}

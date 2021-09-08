@@ -1,0 +1,190 @@
+.catalog-slider {
+
+    // .catalog-slider__container
+    &__container {
+    }
+
+    // .catalog-slider__title
+    &__title {
+        margin: 50px 0;
+        font-size: 18px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    // .catalog-slider__content
+    &__content {
+        position: relative;
+        min-width: 0;
+
+        .slick-list {
+            padding: 10px 0;
+        }
+
+        .slick-track {
+            
+        }
+        
+        .product {
+            
+            img {   
+                // @media (max-width: 1024px) {
+                //     max-height: 400px;
+                // }
+    
+                // @media (max-width: 768px) {
+                //     max-height: 350px;
+                // }
+    
+                // @media (max-width: 590px) {
+                //     max-height: 300px;
+                // }
+    
+                // @media (max-width: 426px) {
+                //     max-height: 250px;
+                //     object-fit: contain;
+                // }
+    
+                // @media (max-width: 350px) {
+                //     max-height: 200px;
+                // }
+            }
+        }
+    
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            width: 50px;
+            height: 50px;
+            transform: translateY(-50%);
+            font-size: 0;
+            transition: .1s;
+            filter: invert(100%);
+            opacity: .4;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            
+            &:hover {
+                opacity: .8;
+            }
+        }
+    
+        .slick-prev {
+            left: 0px;
+            background: url(../img/prev.svg) 0 0 / 100% no-repeat;
+        }
+    
+        .slick-next {
+            right: 0px;
+            background: url(../img/next.svg) 0 0 / 100% no-repeat;
+        }
+    }
+
+    // .catalog-slider__product
+    &__product {
+    }   
+}
+
+.product {
+    $anim-time: .2s;
+    margin: 0 20px;
+    width: 300px;
+    transition: $anim-time;
+    
+    &:hover {
+        box-shadow: 0 0 15px 5px rgba(144, 144, 144, .2);
+
+        .product__image {
+            transform: scale(1.1);
+        }
+        
+        .product__name {
+            color: var(--c-accent);
+        }
+
+        .product__btn {
+            // transform: scale(1.05);
+            background-color: var(--c-primary);
+            color: var(--c-bg-1);
+        }
+    }
+    // .product__link-area
+    &__link-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 25px;
+
+        @media (max-width: 576px) {
+            padding: 5px 15px;
+        }
+
+        @media (max-width: 426px) {
+            padding: 5px 5px;
+        }
+    }
+
+    // .product__image
+    &__image {
+        padding: 20px 0;
+        width: 80%;
+        transition: $anim-time;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    // .product__name
+    &__name {
+        font-size: 18px;
+        font-weight: 700;
+        max-width: 100%;
+        line-height: 22px;
+        height: 44px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: stretch;
+        align-content: stretch;
+        text-align: center;
+        
+        transition: $anim-time;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+
+    // .product__price
+    &__price {
+        padding: 20px 0;
+        margin-top: auto;
+    }
+
+    // .product__btn
+    &__btn {
+        display: block;
+        padding: 12px 0;
+        margin-bottom: 10px;
+        width: 85%;
+        border: 1px solid var(--c-primary);
+        background-color: var(--c-bg-1);
+        transition: $anim-time;
+    }
+}
+

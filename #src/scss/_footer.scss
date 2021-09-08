@@ -1,0 +1,26 @@
+.footer {
+    padding-top: 50px;
+    // border-top: 1px solid #ececec;
+
+    // .footer__bottom
+    &__bottom {
+        color: var(--c-footer-bottom-text);
+        background-color: var(--c-footer-bottom-bg);
+    }
+    
+    .f-bottom__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0;
+        font-size: 14px;
+
+        &__copyright {
+        }
+    
+        &__developer {
+       }
+    }
+
+}
+
